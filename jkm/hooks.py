@@ -16,7 +16,32 @@ app_license = "mit"
 # include js, css files in header of web template
 # web_include_css = "/assets/jkm/css/jkm.css"
 # web_include_js = "/assets/jkm/js/jkm.js"
+doctype_js = {
+	"Payment Entry": "public/js/doctype_js/payment_entry.js",
+	"Sales Invoice": "public/js/doctype_js/sales_invoice.js",
+    "Journal Entry": "public/js/doctype_js/journal_entry.js"
+}
 
+doc_events = {
+	"Payment Entry": {
+		"on_submit": "jkm.api.pe_on_submit",
+		"before_cancel": "jkm.api.pe_on_cancel",
+	},
+	"Journal Entry": {
+    	"on_cancel": "jkm.jkm.doc_events.journal_entry.before_cancel",
+	},
+	"Duty DrawBack Claim":{
+        "on_submit":"jkm.jkm.doctype.duty_drawback_claim.duty_drawback_claim.create_jv_on_submit"
+    },
+	"Rodtep Claim":{
+        "on_submit":"jkm.jkm.doctype.rodtep_claim.rodtep_claim.create_jv_on_submit"
+    },
+    "Sales Invoice":{
+        "validate":"jkm.jkm.doc_events.sales_invoice.validate",
+        "on_submit": "jkm.api.si_on_submit",
+        "on_cancel": "jkm.api.si_on_cancel"
+    }
+}
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "jkm/public/scss/website"
 
