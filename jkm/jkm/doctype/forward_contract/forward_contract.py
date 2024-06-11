@@ -114,7 +114,8 @@ class ForwardContract(Document):
 
 		if not self.bank_account:
 			frappe.throw(_("Please add bank account."))
-
+	
+	@frappe.whitelist()
 	def create_jv(self, row):
 		doc = ''
 		for d in self.cancellation_details:
