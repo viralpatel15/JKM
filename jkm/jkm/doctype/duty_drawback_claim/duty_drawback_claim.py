@@ -18,7 +18,9 @@ class DutyDrawBackClaim(Document):
 		
 	
 	def on_submit(self):
-		
+		for row in self.rodtep_details:
+			if not row.received_amount:
+				frappe.throw("Row #{0}: Received Amount is missing".format(row.idx))
 		if round(self.total_debit_amount,4) != round(self.script_amount,4) + round(self.round_off_amount,4):
 			frappe.throw(str(round(self.total_debit_amount,4))+" "+ str(round(self.script_amount,4))+" "+str(round(self.round_off_amount,4)))
 			frappe.throw(f"""Total Debit Amount should be equal to sum of Script Amount and Round of Amount""")

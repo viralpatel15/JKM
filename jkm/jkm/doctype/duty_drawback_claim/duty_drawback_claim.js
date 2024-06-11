@@ -9,7 +9,7 @@ frappe.ui.form.on('Duty DrawBack Claim', {
             }
         }
 		frappe.call({
-			method : "rodtep_claim_management.rodtep_claim_management.doctype.duty_drawback_claim.duty_drawback_claim.journal_entry_list",
+			method : "jkm.jkm.doctype.duty_drawback_claim.duty_drawback_claim.journal_entry_list",
 			args:{
 				"start_date":frm.doc.start_date,
 				"end_date":frm.doc.end_date,
