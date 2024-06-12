@@ -120,7 +120,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-06 22:32:49.772811",
+ "modified": "2024-06-12 08:22:37.074351",
  "modified_by": "Administrator",
  "module": "JKM",
  "name": "Rodtep Claim",
@@ -137,6 +137,7 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "submit": 1,
    "write": 1
   },
   {
@@ -149,6 +150,7 @@
    "report": 1,
    "role": "Local Admin",
    "share": 1,
+   "submit": 1,
    "write": 1
   },
   {
@@ -161,6 +163,7 @@
    "report": 1,
    "role": "Sales Manager",
    "share": 1,
+   "submit": 1,
    "write": 1
   },
   {
@@ -173,6 +176,7 @@
    "report": 1,
    "role": "Sales User",
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],
