@@ -4,7 +4,7 @@
 
 import frappe
 from frappe.utils import flt
-from forward_contract.forward_contract.doctype.forward_contract.forward_contract import ForwardContract
+from jkm.jkm.doctype.forward_contract.forward_contract import ForwardContract
 
 def before_cancel(self, method):
     if frappe.db.exists("Forward Contract Cancellation" , {'journal_entry' : self.name}):
