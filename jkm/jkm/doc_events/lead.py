@@ -11,7 +11,8 @@ def validate(self, method):
     """, as_dict = 1)
 
     if data:
-        message = "Inquiry is allready exist in the system for item group {0} please check the link mentioned below".format(self.item_group)
+        message = "Inquiry is allready exist in the system for item group <b>{0}</b> please check the link mentioned below".format(self.custom_item_group)
         for row in data:
-            message += "<br>"
             message += "<p>{0}</p>".format(get_link_to_form("Lead" , row.name))
+            
+        frappe.throw(str(message))

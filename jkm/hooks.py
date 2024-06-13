@@ -40,7 +40,10 @@ doc_events = {
         "validate":"jkm.jkm.doc_events.sales_invoice.validate",
         "on_submit": "jkm.api.si_on_submit",
         "on_cancel": "jkm.api.si_on_cancel"
-    }
+    },
+	"Lead":{
+		"validate":"jkm.jkm.doc_events.lead.validate"
+	}
 }
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "jkm/public/scss/website"
