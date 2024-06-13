@@ -28,9 +28,6 @@ def after_insert(self, method):
         doc = frappe.new_doc("Event")
         subject = "Company Name : {0}\n<br>".format(self.company_name)
         subject += "Item Group : {0}\n<br>".format(self.custom_item_group)
-        subject += "Name : {0}\n<br>".format(self.first_name)
-        subject += "Email : {0}\n<br>".format(self.email_id)
-        subject += "Mobile No : {0}\n<br>".format(self.custom_mobile_number)
         doc.subject = subject
         doc.event_category = "Call"
         doc.event_type = "Public"
