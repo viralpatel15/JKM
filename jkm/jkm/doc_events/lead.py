@@ -17,6 +17,7 @@ def validate(self, method):
             message += "<p>{0}</p>".format(get_link_to_form("Lead" , row.name))
             
         frappe.throw(str(message))
+
 def after_insert(self, method):
     events = frappe.db.sql(f"""
         Select e.name
