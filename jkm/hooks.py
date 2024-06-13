@@ -42,7 +42,8 @@ doc_events = {
         "on_cancel": "jkm.api.si_on_cancel"
     },
 	"Lead":{
-		"validate":"jkm.jkm.doc_events.lead.validate"
+		"validate":"jkm.jkm.doc_events.lead.validate",
+		"after_insert":"jkm.jkm.doc_events.lead.after_insert"
 	}
 }
 # include custom scss in every website theme (without file extension ".scss")
