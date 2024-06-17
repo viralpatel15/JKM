@@ -90,7 +90,7 @@ frappe.ui.form.on("Costing Details", {
                     docname : frm.doc.supplier_quotation
                 },
                 callback:e=>{
-                    frm.doc.items = []
+                    frm.doc.shipping_charges = []
                     e.message.items.forEach(element => {
                         let row = frm.add_child("shipping_charges");
                         row.amount = element.amount
@@ -152,7 +152,7 @@ frappe.ui.form.on("Costing Details", {
                     docname : frm.doc.export_quotation
                 },
                 callback:e=>{
-                    frm.doc.items = []
+                    frm.doc.export_charges = []
                     e.message.items.forEach(element => {
                         let row = frm.add_child("export_charges");
                         row.amount = element.amount
