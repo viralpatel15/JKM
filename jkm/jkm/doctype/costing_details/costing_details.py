@@ -21,6 +21,8 @@ class CostingDetails(Document):
 			taxable_value += row.taxable_value
 		self.total_quantity = total_qty
 		self.total_amount = net_amount
+
+
 		total_cost = 0
 		if self.grand_total_d:
 			total_cost += self.grand_total_d
@@ -30,8 +32,10 @@ class CostingDetails(Document):
 			total_cost += self.grand_total_e
 		if self.total_amount_charges:
 			total_cost += self.total_amount_charges
+		
 		if total_cost:
 			self.total_cost__total_qty = total_cost / total_quantity
+			self.total_cost = total_cost
 
 
 @frappe.whitelist()		
