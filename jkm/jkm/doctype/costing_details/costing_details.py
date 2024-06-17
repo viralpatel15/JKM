@@ -28,6 +28,10 @@ class CostingDetails(Document):
 			total_cost += self.grand_total
 		if self.grand_total_e:
 			total_cost += self.grand_total_e
+		if total_cost:
+			self.total_cost__total_qty = total_cost / total_quantity
+
+
 @frappe.whitelist()		
 def get_item_details(docname):
 	return frappe.get_doc("Supplier Quotation", docname)
