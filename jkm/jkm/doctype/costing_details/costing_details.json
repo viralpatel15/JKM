@@ -30,11 +30,11 @@
   "local_transportar_section",
   "supplier",
   "place_of_delivery",
-  "port_of_origin",
   "column_break_lyye",
   "supplier_name",
-  "supplier_quotation",
+  "port_of_origin",
   "section_break_fyzr",
+  "supplier_quotation",
   "shipping_charges",
   "total_amount_domestic",
   "taxes_and_charges",
@@ -187,7 +187,8 @@
    "fieldname": "export_charges",
    "fieldtype": "Table",
    "label": "Export Charges",
-   "options": "Supplier Quotation Item"
+   "options": "Supplier Quotation Item",
+   "read_only": 1
   },
   {
    "fieldname": "tab_4_tab",
@@ -214,7 +215,8 @@
    "fieldname": "items",
    "fieldtype": "Table",
    "label": "Product Details",
-   "options": "Supplier Quotation Item"
+   "options": "Supplier Quotation Item",
+   "read_only": 1
   },
   {
    "fieldname": "naming_series",
@@ -242,7 +244,8 @@
    "fieldname": "shipping_charges",
    "fieldtype": "Table",
    "label": "Shipping Charges",
-   "options": "Supplier Quotation Item"
+   "options": "Supplier Quotation Item",
+   "read_only": 1
   },
   {
    "fieldname": "export_charges_tab",
@@ -345,7 +348,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-17 16:08:59.669043",
+ "modified": "2024-06-17 16:30:00.158793",
  "modified_by": "Administrator",
  "module": "JKM",
  "name": "Costing Details",

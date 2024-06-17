@@ -28,6 +28,8 @@ class CostingDetails(Document):
 			total_cost += self.grand_total
 		if self.grand_total_e:
 			total_cost += self.grand_total_e
+		if self.total_amount_charges:
+			total_cost += self.total_amount_charges
 		if total_cost:
 			self.total_cost__total_qty = total_cost / total_quantity
 

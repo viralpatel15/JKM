@@ -18,6 +18,28 @@ frappe.ui.form.on("Costing Details", {
 				},
 			};
 		});
+        frm.set_query("export_quotation", function () {
+			return {
+				filters: {
+					docstatus: 1,
+                    supplier:frm.doc.supplier
+				},
+			};
+		});
+        frm.set_query("supplier", function () {
+			return {
+				filters: {
+					is_transporter: 1,
+				},
+			};
+		});
+        frm.set_query("supplier_id", function () {
+			return {
+				filters: {
+					is_transporter: 1,
+				},
+			};
+		});
     },
     items_quotation:frm=>{
         if(frm.doc.items_quotation){
@@ -209,4 +231,26 @@ frappe.ui.form.on("Costing Details", {
 });
 
 
-
+frappe.ui.form.on("Other Charges", {
+    charges_amount:frm=>{
+        total_charges = 0
+        frm.doc.other_charges.forEach(r=>{
+            total_charges += r.charges_amount
+        })
+        frm.set_value('total_amount_charges', total_charges)
+    },
+    other_charges_add:frm=>{
+        total_charges = 0
+        frm.doc.other_charges.forEach(r=>{
+            total_charges += r.charges_amount
+        })
+        frm.set_value('total_amount_charges', total_charges)
+    },
+    other_charges_remove:frm=>{
+        total_charges = 0
+        frm.doc.other_charges.forEach(r=>{
+            total_charges += r.charges_amount
+        })
+        frm.set_value('total_amount_charges', total_charges)
+    }
+})
