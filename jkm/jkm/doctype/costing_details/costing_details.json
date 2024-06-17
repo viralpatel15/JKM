@@ -137,7 +137,8 @@
    "fieldname": "place_of_delivery",
    "fieldtype": "Link",
    "label": "Place of Delivery",
-   "options": "Origin"
+   "options": "Origin",
+   "read_only": 1
   },
   {
    "fieldname": "section_break_fyzr",
@@ -234,7 +235,8 @@
    "fieldname": "port_of_origin",
    "fieldtype": "Link",
    "label": "Port of Origin",
-   "options": "Origin"
+   "options": "Origin",
+   "read_only": 1
   },
   {
    "fieldname": "shipping_charges",
@@ -268,14 +270,16 @@
    "fieldname": "port_of_origin_e",
    "fieldtype": "Link",
    "label": "Port of Origin",
-   "options": "Origin"
+   "options": "Origin",
+   "read_only": 1
   },
   {
    "fetch_from": "export_quotation.custom_port_of_destination",
    "fieldname": "port_of_destination_e",
    "fieldtype": "Link",
    "label": "Port of Destination",
-   "options": "Origin"
+   "options": "Origin",
+   "read_only": 1
   },
   {
    "fieldname": "section_break_vzar",
@@ -334,13 +338,14 @@
   {
    "fieldname": "total_cost__total_qty",
    "fieldtype": "Currency",
-   "label": "Total Cost / Total QTY"
+   "label": "Total Cost / Total QTY",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-17 15:22:18.089248",
+ "modified": "2024-06-17 16:08:59.669043",
  "modified_by": "Administrator",
  "module": "JKM",
  "name": "Costing Details",
