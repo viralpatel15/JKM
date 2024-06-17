@@ -22,7 +22,7 @@ frappe.ui.form.on("Costing Details", {
 			return {
 				filters: {
 					docstatus: 1,
-                    supplier:frm.doc.supplier
+                    supplier:frm.doc.supplier_id
 				},
 			};
 		});
@@ -103,6 +103,13 @@ frappe.ui.form.on("Costing Details", {
                 }
             })
         }
+        else{
+            frm.doc.items = []
+            frm.set_value('total_quantity', 0)
+            frm.set_value('total_amount', 0)
+            frm.set_value('total_taxes_and_charges_d', 0)
+            frm.set_value('grand_total_d', 0)
+        }
     },
     supplier_quotation:frm=>{
         if(frm.doc.supplier_quotation){
@@ -165,6 +172,12 @@ frappe.ui.form.on("Costing Details", {
                 }
             })
         }
+        else{
+            frm.doc.shipping_charges = []
+            frm.set_value('total_amount_domestic', 0)
+            frm.set_value('taxes_and_charges', 0)
+            frm.set_value('grand_total', 0)
+        }
     },
     export_quotation:frm=>{
         if(frm.doc.export_quotation){
@@ -226,6 +239,12 @@ frappe.ui.form.on("Costing Details", {
                     frm.set_value('grand_total_e', e.message.grand_total)
                 }
             })
+        }
+        else{
+            frm.doc.export_quotation = []
+            frm.set_value('total_amount_e', 0)
+            frm.set_value('total_taxes_and_charges', 0)
+            frm.set_value('grand_total_e', 0)
         }
     }
 });
