@@ -77,7 +77,7 @@ frappe.ui.form.on("Costing Details", {
                     frm.set_value('total_quantity', e.message.total_qty)
                     frm.set_value('total_amount', e.message.total)
                     frm.set_value('total_taxes_and_charges_d', e.message.total_taxes_and_charges)
-                    frm.set_value('grand_total_d', e.element.grand_total)
+                    frm.set_value('grand_total_d', e.message.grand_total)
                 }
             })
         }

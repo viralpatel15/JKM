@@ -21,8 +21,7 @@ class CostingDetails(Document):
 			taxable_value += row.taxable_value
 		self.total_quantity = total_qty
 		self.total_amount = net_amount
-		self.taxable_value = taxable_value
-
+		self.grand_total_d = doc.grand_total
 @frappe.whitelist()		
 def get_item_details(docname):
 	return frappe.get_doc("Supplier Quotation", docname)
