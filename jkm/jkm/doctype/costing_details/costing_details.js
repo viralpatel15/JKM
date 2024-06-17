@@ -109,6 +109,7 @@ frappe.ui.form.on("Costing Details", {
             frm.set_value('total_amount', 0)
             frm.set_value('total_taxes_and_charges_d', 0)
             frm.set_value('grand_total_d', 0)
+            frm.refresh_field("items");
         }
     },
     supplier_quotation:frm=>{
@@ -177,6 +178,7 @@ frappe.ui.form.on("Costing Details", {
             frm.set_value('total_amount_domestic', 0)
             frm.set_value('taxes_and_charges', 0)
             frm.set_value('grand_total', 0)
+            frm.refresh_field("shipping_charges");
         }
     },
     export_quotation:frm=>{
@@ -245,6 +247,7 @@ frappe.ui.form.on("Costing Details", {
             frm.set_value('total_amount_e', 0)
             frm.set_value('total_taxes_and_charges', 0)
             frm.set_value('grand_total_e', 0)
+            frm.refresh_field("export_charges");
         }
     }
 });
