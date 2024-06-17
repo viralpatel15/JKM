@@ -20,7 +20,8 @@ doctype_js = {
 	"Payment Entry": "public/js/doctype_js/payment_entry.js",
 	"Sales Invoice": "public/js/doctype_js/sales_invoice.js",
     "Journal Entry": "public/js/doctype_js/journal_entry.js",
-	"Lead": "public/js/doctype_js/lead.js"
+	"Lead": "public/js/doctype_js/lead.js",
+	"Opportunity": "public/js/doctype_js/opportunity.js",
 }
 
 doc_events = {
