@@ -76,7 +76,7 @@ frappe.ui.form.on("Costing Details", {
                     });
                     frm.set_value('total_quantity', e.message.total_qty)
                     frm.set_value('total_amount', e.message.total)
-                    frm.set_value('total_taxes_and_charges_d', e.element.total_taxes_and_charges)
+                    frm.set_value('total_taxes_and_charges_d', e.message.total_taxes_and_charges)
                     frm.set_value('grand_total_d', e.element.grand_total)
                 }
             })
@@ -138,7 +138,7 @@ frappe.ui.form.on("Costing Details", {
                         frm.refresh_field("shipping_charges");
                     });
                     frm.set_value('total_amount_domestic', e.message.total)
-                    frm.set_value('taxes_and_charges', e.element.total_taxes_and_charges)
+                    frm.set_value('taxes_and_charges', e.message.total_taxes_and_charges)
                     frm.set_value('grand_total', e.element.grand_total)
                 }
             })
