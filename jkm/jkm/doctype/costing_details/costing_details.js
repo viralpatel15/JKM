@@ -46,7 +46,6 @@ frappe.ui.form.on("Costing Details", {
                         row.cost_center = element.cost_center
                         row.description =element.description
                         row.discount_amount=element.discount_amount
-                        row.amount = element.discount_percentage
                         row.discount_percentage= element.discount_percentage
                         row.gst_hsn_code = element.gst_hsn_code
                         row.igst_amount = element.igst_amount
@@ -110,7 +109,6 @@ frappe.ui.form.on("Costing Details", {
                         row.cost_center = element.cost_center
                         row.description =element.description
                         row.discount_amount=element.discount_amount
-                        row.amount = element.discount_percentage
                         row.discount_percentage= element.discount_percentage
                         row.gst_hsn_code = element.gst_hsn_code
                         row.igst_amount = element.igst_amount
