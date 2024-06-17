@@ -16,6 +16,7 @@
   "company",
   "posting_date",
   "opportunity",
+  "total_cost__total_qty",
   "product_details_section",
   "items_quotation",
   "items",
@@ -132,6 +133,7 @@
    "read_only": 1
   },
   {
+   "fetch_from": "supplier_quotation.custom_place_of_delivery",
    "fieldname": "place_of_delivery",
    "fieldtype": "Link",
    "label": "Place of Delivery",
@@ -228,6 +230,7 @@
    "reqd": 1
   },
   {
+   "fetch_from": "supplier_quotation.custom_port_of_origin",
    "fieldname": "port_of_origin",
    "fieldtype": "Link",
    "label": "Port of Origin",
@@ -261,12 +264,14 @@
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": "export_quotation.custom_port_of_origin",
    "fieldname": "port_of_origin_e",
    "fieldtype": "Link",
    "label": "Port of Origin",
    "options": "Origin"
   },
   {
+   "fetch_from": "export_quotation.custom_port_of_destination",
    "fieldname": "port_of_destination_e",
    "fieldtype": "Link",
    "label": "Port of Destination",
@@ -325,12 +330,17 @@
   {
    "fieldname": "column_break_grds",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_cost__total_qty",
+   "fieldtype": "Currency",
+   "label": "Total Cost / Total QTY"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-17 14:50:08.226546",
+ "modified": "2024-06-17 15:22:18.089248",
  "modified_by": "Administrator",
  "module": "JKM",
  "name": "Costing Details",
