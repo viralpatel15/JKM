@@ -34,7 +34,7 @@ class CostingDetails(Document):
 			total_cost += self.total_amount_charges
 		
 		if total_cost:
-			self.total_cost__total_qty = total_cost / total_quantity
+			self.total_cost__total_qty = total_cost / self.total_quantity
 			self.total_cost = total_cost
 
 
