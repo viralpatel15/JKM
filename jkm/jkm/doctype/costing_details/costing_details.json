@@ -228,7 +228,6 @@
    "reqd": 1
   },
   {
-   "depends_on": "eval:doc.shipping_type == \"Export\"",
    "fieldname": "port_of_origin",
    "fieldtype": "Link",
    "label": "Port of Origin",
@@ -330,7 +329,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-17 14:25:27.292283",
+ "modified": "2024-06-17 14:48:26.233968",
  "modified_by": "Administrator",
  "module": "JKM",
  "name": "Costing Details",
