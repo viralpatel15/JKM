@@ -7,11 +7,6 @@ from frappe.model.document import Document
 
 class CostingDetails(Document):
 	def validate(self):
-		if self.items_quotation:
-			doc = frappe.get_doc("Supplier Quotation", self.items_quotation)
-			self.items = []
-			for row in doc.items:
-				self.append('items', row)
 		total_qty = 0
 		taxable_value = 0
 		net_amount = 0
@@ -34,8 +29,8 @@ class CostingDetails(Document):
 			total_cost += self.total_amount_charges
 		
 		if total_cost:
-			self.total_cost__total_qty = total_cost / self.total_quantity
 			self.total_cost = total_cost
+			self.total_cost__total_qty = total_cost / self.total_quantity
 
 
 @frappe.whitelist()		
